@@ -92,3 +92,7 @@ upload/
 
 ### Mac OS X
 .DS_Store
+
+
+### SQLite3
+db.sqlite3
