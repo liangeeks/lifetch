@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+    <title>Lifetch | {% block title %}{% endblock %}</title>
+    <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+    <link href="//cdn.bootcss.com/semantic-ui/2.1.8/semantic.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="ui container">
+    <h1>{% block head %}{% endblock %}</h1>
+    {% block content %}{% endblock %}
+</div>
+<script src="//cdn.bootcss.com/jquery/3.0.0-rc1/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/semantic-ui/2.1.8/semantic.js"></script>
+</body>
+</html>

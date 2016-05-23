@@ -1,0 +1,37 @@
+{% load i18n static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+    <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+    <link href="//cdn.bootcss.com/semantic-ui/2.1.8/semantic.min.css" rel="stylesheet">
+    <link href="{% static 'commons.css' %}" rel="stylesheet">
+</head>
+<body>
+<form action="{{ app_path }}" method="post" id="login-form" class="single-form-page">
+    <h1>登录</h1>
+    {% csrf_token %}
+    <div class="form-row">
+        {{ form.username.errors }}
+        {{ form.username.label_tag }} {{ form.username }}
+    </div>
+    <div class="form-row">
+        {{ form.password.errors }}
+        {{ form.password.label_tag }} {{ form.password }}
+        <input type="hidden" name="next" value="{{ next }}"/>
+    </div>
+    {% url 'admin_password_reset' as password_reset_url %}
+    {% if password_reset_url %}
+        <div class="password-reset-link">
+            <a href="{{ password_reset_url }}">{% trans 'Forgotten your password or username?' %}</a>
+        </div>
+    {% endif %}
+    <div class="submit-row">
+        <label>&nbsp;</label><input type="submit" value="{% trans 'Log in' %}"/>
+    </div>
+</form>
+<script src="//cdn.bootcss.com/jquery/3.0.0-rc1/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/semantic-ui/2.1.8/semantic.js"></script>
+</body>
+</html>

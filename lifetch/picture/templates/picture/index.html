@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LiFetch Picture</title>
+    <link href="//cdn.bootcss.com/normalize/4.1.1/normalize.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'commons.css' %}">
+</head>
+<body>
+{% include '_header.html' with active='picture' %}
+
+<section id="main">
+    <form action="{% url 'picture:upload' %}" method="post">
+
+    </form>
+</section>
+
+<footer>
+
+</footer>
+</body>
+</html>

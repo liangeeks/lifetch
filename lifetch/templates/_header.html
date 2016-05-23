@@ -1,0 +1,15 @@
+<header>
+    <div id="branding">
+        <h1 id="site-name"><a href="/">Lifetch</a></h1>
+    </div>
+    <div id="apps">
+        <a href="{% url 'picture:index' %}" class="{% if active == 'picture' %}active{% endif %}">印象</a>
+    </div>
+    <div id="user-tools">
+
+        欢迎, <a href="{% url 'accounts:profile' %}"><strong>{{ user.username }}</strong></a> /
+        <a href="{% url 'accounts:logout' %}">退出</a>
+
+    </div>
+
+</header>

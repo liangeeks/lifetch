@@ -1,0 +1,141 @@
+
+body {
+    font-family: "Lantinghei SC", "Open Sans", Arial, "Hiragino Sans GB", "Microsoft YaHei", "\5FAE\8F6F\96C5\9ED1", "STHeiti", "WenQuanYi Micro Hei", SimSun, sans-serif;
+}
+
+header {
+    width: auto;
+    height: 40px;
+    padding: 10px 40px;
+    background-color: #784aba;
+    line-height: 40px;
+    color: #ffffff;
+    overflow: hidden;
+}
+
+header a,
+header a:visited {
+    color: #fff;
+}
+
+#branding {
+    float: left;
+}
+
+#site-name {
+    margin: 0;
+}
+
+#site-name a {
+    text-decoration: none;
+}
+
+#apps {
+    padding: 0 10px;
+    float: left;
+}
+
+#apps a {
+    margin: 0 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+#apps a.active {
+    color: #ddaaff;
+}
+
+#user-tools {
+    float: right;
+    padding: 0;
+    margin: 0 0 0 20px;
+    font-weight: 300;
+    font-size: 11px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    text-align: right;
+}
+
+#user-tools a {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+#main {
+    position: absolute;
+    top: 60px;
+    width: 100%;
+    min-height: 100%;
+    z-index: 2;
+    background-color: #fff;
+    margin-bottom: 140px;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    height: 100px;
+    padding: 20px;
+    width: 100%;
+    color: #fff;
+    background-color: #2f1d49;
+    z-index: 1;
+}
+
+/* single-form-page */
+form.single-form-page {
+    margin: 50px auto;
+    padding: 0 0 50px;
+    width: 80%;
+    max-width: 450px;
+}
+
+form.single-form-page h1 {
+    padding: 50px;
+    color: #663f9e;
+    text-align: center;
+}
+
+form.single-form-page input {
+    background-color: #fff;
+    border: 1px solid #999;
+    padding: 8px 10px;
+    outline: none;
+}
+
+form.single-form-page input:focus {
+    border: 1px solid #663f9e;
+}
+
+form.single-form-page .form-row,
+form.single-form-page .submit-row {
+    padding: 20px;
+}
+
+form.single-form-page .form-row label,
+form.single-form-page .submit-row label {
+    padding: 8px 10px;
+    display: inline-block;
+    width: 100px;
+    text-align: right;
+}
+
+form.single-form-page .form-row input,
+form.single-form-page .submit-row input {
+    float: right;
+    width: 280px;
+    transition: all 0.3s;
+}
+
+form.single-form-page .form-row input[type='submit']:hover,
+form.single-form-page .submit-row input[type='submit']:hover {
+    color: #fff;
+    background-color: #663f9e;
+    border: 1px solid #663f9e;
+}
+
+form.single-form-page .form-row input[type='submit']:active,
+form.single-form-page .submit-row input[type='submit']:active {
+    color: #fff;
+    opacity: 0.7;
+    background-color: #663f9e;
+    border: 1px solid #663f9e;
+}
