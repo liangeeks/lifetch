@@ -1,0 +1,150 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f1f1f1;
+}
+
+#main {
+    background-color: #f1f1f1;
+}
+
+#uploadForm {
+    padding: 5px;
+    margin: 20px auto;
+    width: 80%;
+}
+
+#board {
+    margin: 20px auto;
+    width: 80%;
+}
+
+#board .row {
+    display: flex;
+}
+
+#board .item {
+    padding: 5px;
+    max-width: 50%;
+}
+
+#board .item .inner {
+    position: relative;
+    display: inline-block;
+    float: left;
+    height: 300px;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+#board .item .inner .title {
+    position: absolute;
+    bottom: 0;
+    padding: 10px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+}
+
+.flex-1 {
+    flex: 1;
+}
+
+.flex-2 {
+    flex: 2;
+}
+
+.load-more {
+    text-align: center;
+    padding: 10px;
+    color: #fff;
+    background-color: #663f9e;
+    margin: 5px;
+    cursor: pointer;
+}
+
+/* file upload */
+.fileinput-button {
+    color: #fff;
+    padding: 5px 10px;
+    background-color: #663f9e;
+}
+
+.fileinput-button:hover {
+    background-color: #8652cf;
+}
+
+.fileinput-button:active {
+    background-color: #4b2f75;
+}
+
+#uploadBox {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background: #fff;
+    z-index: 3;
+    overflow-y: auto;
+    max-height: 80%;
+    height: 500px;
+    -webkit-box-shadow: 0 2px 4px #e0e0e0;
+    -moz-box-shadow: 0 2px 4px #e0e0e0;
+    box-shadow: 0 2px 4px #e0e0e0;
+    display: none;
+    padding: 40px 10px 20px;
+}
+
+#uploadBox > .title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #e0e0e0;
+    padding: 10px;
+    z-index: 1;
+}
+
+.upload-statusbar {
+    padding: 10px;
+    font-size: 12px;
+    margin: 5px;
+    position: relative;
+    width: 400px;
+}
+
+.upload-statusbar .progress-bar {
+    color: #fff;
+    background-color: #2f8ab9;
+    line-height: 15px;
+    font-size: 12px;
+    padding: 3px;
+}
+
+.upload-statusbar .close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+    display: none;
+}
+
+.upload-statusbar:hover .close {
+    display: inline-block;
+}
+
+.upload-statusbar.error .message {
+    padding: 5px;
+    color: #fff;
+    background-color: #cc6633;
+}
+
+.upload-statusbar:not(:last-child) {
+    border-bottom: 1px solid #e0e0e0;
+}
+

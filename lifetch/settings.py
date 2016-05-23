@@ -15,7 +15,6 @@ import os
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.9/howto/deployment/checklist/
 
@@ -26,7 +25,6 @@ SECRET_KEY = 'v7(y6isbaaho5adox$6%l9+-rv&g)!g&&xu8*0iqn(kiou2o9('
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
 
 # Application definition
 
@@ -74,7 +72,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'lifetch.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/1.9/ref/settings/#databases
 
@@ -84,7 +81,6 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/1.9/ref/settings/#auth-password-validators
@@ -104,7 +100,15 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-DEFAULT_FILE_STORAGE = 'qiniustorage.backends.QiniuStorage'
+# Media
+MEDIA_ROOT = 'media'
+
+# 七牛云存储
+DEFAULT_FILE_STORAGE = 'qiniustorage.backends.QiniuMediaStorage'
+QINIU_ACCESS_KEY = os.environ.get('QINIU_ACCESS_KEY', 'cSlEbes-zd-cr0xbIgzXrnKA7l5FoQL3IPWxPgM6')
+QINIU_SECRET_KEY = os.environ.get('QINIU_SECRET_KEY', '3rjQYp-5Qbc8nL-cP9o3qfRUCrWH9WX18em4iih0')
+QINIU_BUCKET_NAME = os.environ.get('QINIU_BUCKET_NAME', 'discuss-py')
+QINIU_BUCKET_DOMAIN = os.environ.get('QINIU_BUCKET_DOMAIN', '7xryaw.com1.z0.glb.clouddn.com')
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.9/topics/i18n/
@@ -118,7 +122,6 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
-
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
