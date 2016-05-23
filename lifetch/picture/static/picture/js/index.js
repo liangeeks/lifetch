@@ -65,6 +65,8 @@
     });
 
     new Board().render();
+
+
     $('#fileupload')
       .fileupload({
         url: '/picture/upload',
