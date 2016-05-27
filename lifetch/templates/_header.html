@@ -7,8 +7,12 @@
     </div>
     <div id="user-tools">
 
-        欢迎, <a href="{% url 'accounts:profile' %}"><strong>{{ user.username }}</strong></a> /
-        <a href="{% url 'accounts:logout' %}">退出</a>
+        {% if user.is_active %}
+            欢迎, <a href="{% url 'accounts:profile' %}"><strong>{{ user.username }}</strong></a> /
+            <a href="{% url 'accounts:logout' %}">退出</a>
+        {% else %}
+            <a href="{% url 'accounts:login' %}?next=/">登录</a>
+        {% endif %}
 
     </div>
 

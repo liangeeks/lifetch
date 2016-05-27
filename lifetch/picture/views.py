@@ -10,10 +10,9 @@ from lifetch.picture.forms import UploadFileForm
 from lifetch.picture.models import Picture
 
 
-
 @login_required
 def index(request):
-    return render(request, 'picture/dev/index.html')
+    return render(request, 'picture/index.html')
 
 
 @login_required
